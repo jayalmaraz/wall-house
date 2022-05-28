@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Logo from '~/components/Logo';
 
 // const PROBABILITY_ROW = PROBABILITY_TABLE.reduce<Array<ProbabilityTableItems>>((prev, current) => {
 //   const prevProb = prev?.[0]?.[0] ?? 0;
@@ -21,6 +20,18 @@ type ProbabilityTableItems = [number, Item];
 
 const PROBABILITY_TABLE: Array<ProbabilityTableItems> = [
   [0.5, 'Finish your drink'],
+  [0.5, 'Finish your drink'],
+  [0.5, 'Finish your drink'],
+  [0.5, 'Finish your drink'],
+  [0.5, 'Person to your left finished their drink'],
+  [0.5, 'Person to your left finished their drink'],
+  [0.5, 'Person to your left finished their drink'],
+  [0.5, 'Person to your right finished their drink'],
+  [0.5, 'Person to your right finished their drink'],
+  [0.5, 'Person to your right finished their drink'],
+  [0.5, 'Choose someone to have a funnel'],
+  [0.5, 'Swap drinks with the person to your left'],
+  [0.5, 'Swap drinks with the person to your right'],
   [0.5, 'Kiss the person to your left'],
   [0.5, 'Kiss the person to your right'],
   [0.5, 'Do a funnel'],
@@ -66,7 +77,7 @@ const Index = () => {
   return (
     <div className="flex justify-start items-center pt-20 h-screen w-screen flex-col text-center">
       <div>
-        <Logo className="bg-white h-20" />
+        <img src="/174cn.png" height={80} />
       </div>
 
       <div className="grid h-full pb-32 px-4 pt-12">
