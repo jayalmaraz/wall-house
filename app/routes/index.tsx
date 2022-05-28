@@ -30,9 +30,13 @@ const PROBABILITY_TABLE: Array<ProbabilityTableItems> = [
   [0.5, 'Get yourself a cup of punch'],
   [0.5, 'Post something to the Facebook event'],
   [0.5, 'Get a photo with a Spongebob character'],
-  // [0.5, 'karen-1'],
-  // [0.5, 'karen-2'],
-  // [0.5, 'karen-3'],
+  [0.5, 'Get a photo with a Simpsons character'],
+  [0.5, 'Slap a Toy Story character'],
+  [0.5, 'Dance with a Power Puff Girls character'],
+  [0.5, 'karen-1'],
+  [0.5, 'karen-2'],
+  [0.5, 'karen-3'],
+  [0.5, 'karen-4'],
 ];
 
 function getRandomInt(min: number, max: number) {
@@ -61,13 +65,22 @@ const Index = () => {
 
   return (
     <div className="flex justify-start items-center pt-20 h-screen w-screen flex-col text-center">
-      <Logo className="bg-white h-20" />
+      <div>
+        <Logo className="bg-white h-20" />
+      </div>
 
-      <div className="grid h-full pb-32 px-4 pt-16">
+      <div className="grid h-full pb-32 px-4 pt-12">
         <div>
           <h2 className="text-2xl">
             You must: <br />
-            <span className="text-5xl font-bold">{item}</span>
+            {item?.startsWith('karen') ? (
+              <>
+                <span className="text-2xl font-bold">Look at this photo of Karen ♥️</span>
+                <img src={`/${item}.jpg`} width={480} />
+              </>
+            ) : (
+              <span className="text-5xl font-bold">{item}</span>
+            )}
           </h2>
         </div>
       </div>
